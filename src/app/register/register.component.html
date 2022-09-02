@@ -1,0 +1,29 @@
+
+
+<div class="main">
+    <div class="full">
+        <div class="left">
+         <img src="../../assets/dp.avif" alt="">
+        </div>
+        <div class="right">
+<h1>
+    REGISTER
+</h1>
+<form [formGroup]="loginform" (ngSubmit)="loginuser()">
+    <input type="text" placeholder="Enter Email" name="user" formControlName="user">
+    <br>
+    <span style="color: red"  *ngIf=" submitted && user && user.invalid">
+        this field is not valid
+      </span>
+    <br>
+    <input type="text" placeholder="Enter password" name="password" formControlName="password"><br>
+    <span style="color: red" *ngIf=" submitted && password && password.invalid">
+        this field is not valid
+              </span>
+
+<button type="submit">Register</button><br>
+</form>
+<a class="a" routerLink="/login"><p> Already a User ? Login Here </p></a>
+        </div>
+    </div>
+</div>
